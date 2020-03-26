@@ -947,16 +947,15 @@ public class CollisionTriggerHandler : MonoBehaviour
 
     private void PrintCollData(CollEnterDataBundle data)
     {
-        return;
-		Debug. Log("gameobject: " + data.interactionCont.gameObject.name);
-		Debug. Log("collision cont: " + data.collisionCont.GetInstanceID());
-		Debug. Log("collider: " + data.collision.collider);
-		foreach (Coll2DContactPoint point in data.collision.contacts)
-		{
-			Debug. Log("contact point: " + point.point + " " + point.normal + " " + point.otherCollider.name + " " + point.collider.name);
-		}
-		Debug. Log("relative vel: " + data.collision.relativeVelocity);
-	}
+        Debug.Log("gameobject: " + data.interactionCont.gameObject.name);
+        Debug.Log("collision cont: " + data.collisionCont.GetInstanceID());
+        Debug.Log("collider: " + data.collision.collider);
+        foreach (Coll2DContactPoint point in data.collision.contacts)
+        {
+            Debug.Log("contact point: " + point.point + " " + point.normal + " " + point.otherCollider.name + " " + point.collider.name);
+        }
+        Debug.Log("relative vel: " + data.collision.relativeVelocity);
+    }
 
     #region DisabledCollidersHelpers
     public void DisableColliderCollPair(Collider2D coll1, Collider2D coll2, string key)

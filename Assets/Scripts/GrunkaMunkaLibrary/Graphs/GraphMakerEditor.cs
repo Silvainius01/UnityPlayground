@@ -8,8 +8,8 @@ public partial class GraphMaker
 	public class Editor : UnityEditor.Editor
 	{
 		public delegate bool DrawInspectorDelegate();
-		static bool blocksOnGenerate = false;
-		static bool diagsOnGenerate = false;
+		//static bool blocksOnGenerate = false;
+		//static bool diagsOnGenerate = false;
 		static GraphMaker graphMaker;
 		static Vector2Int dimensions = new Vector2Int();
 

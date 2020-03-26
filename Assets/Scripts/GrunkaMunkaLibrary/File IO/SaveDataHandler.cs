@@ -134,7 +134,7 @@ public class SaveDataHandler : MonoBehaviour
             }
             catch(System.Exception e)
             {
-                throw;
+                throw e;
             }
             finally
             {
@@ -160,7 +160,7 @@ public class SaveDataHandler : MonoBehaviour
             file.Close();
             return true;
         }
-        catch (IOException ex)
+        catch (IOException)
         {
             return false;
         }
@@ -230,7 +230,7 @@ public class SaveDataHandler : MonoBehaviour
                 }
                 catch(System.Exception e)
                 {
-                    throw;
+                    throw e;
                 }
                 finally
                 {
@@ -332,7 +332,7 @@ public class SaveDataHandler : MonoBehaviour
             }
             return true;
         }
-        catch (IOException ex)
+        catch (IOException)
         {
             return false;
         }
@@ -348,7 +348,7 @@ public class SaveDataHandler : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            throw;
+            throw e;
         }
         return outputData;
     }
@@ -364,7 +364,7 @@ public class SaveDataHandler : MonoBehaviour
         }
         catch (System.Exception e)
         {
-            throw;
+            throw e;
         }
     }
 

@@ -149,7 +149,7 @@ public class AssetBundleManager : MonoBehaviour
 	{
         // load the desired asset bundle and wait for it to complete
         string uri = "file:///" + bundlePath + name;
-        UnityWebRequest request = UnityWebRequest.GetAssetBundle(uri, 0);
+        UnityWebRequest request = UnityWebRequestAssetBundle.GetAssetBundle(uri, 0);
 		yield return request.SendWebRequest();
         AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(request);
 
